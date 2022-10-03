@@ -24,7 +24,7 @@ public class Caesar {
         // scanner.close();
     }
     public void caesarDecoder() {
-        System.out.println("Program deszyfrujący wiadomość zakodowana szyfrem Cezara");
+        System.out.println("Deszyfrowanie wiadomości zakodowanej szyfrem Cezara");
         System.out.println("Podaj tekst do odszyfrowania: ");
         Scanner scanner = new Scanner(System.in);
         String opo = scanner.nextLine().toUpperCase();
