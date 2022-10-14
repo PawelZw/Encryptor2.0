@@ -63,18 +63,17 @@ public class Polybius {
     }
     public void polybiusDecoder() {
         System.out.println("Funkcja deszyfrująca Polibiusz");
-        System.out.println("Funkcja chwilowo niedostępna");
 
-        /*  String tp;
+        String tp;
         String decpt;
         System.out.println("Deszyfrowanie wiadomości zakodowanej szyfrem Polibiusza ");
         System.out.println("Podaj tekst do odszyfrowania:  ");
         Scanner scanner = new Scanner(System.in);
         tp = scanner.nextLine().toUpperCase();
         createTable();
-        String encpt = encrypt(tp);
-        decpt = decrypt(encpt);
-        System.out.println("Tekst po odszyfrowaniu Polibiusz  " + decpt.toLowerCase());
-        System.out.println();   */
+        String decpt1 = decrypt(tp);
+        decpt = encrypt(tp);
+        System.out.println("Tekst po odszyfrowaniu Polibiusz  " + decpt1.toLowerCase());
+        System.out.println();
     }
 }
