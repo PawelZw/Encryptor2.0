@@ -4,7 +4,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 
-public class Bacon {
+public class Bacon implements Cipher {
 
     private static final Map<Character, String> codes;
 
@@ -60,6 +60,27 @@ public class Bacon {
             sb.append(key);
         }
         return sb.toString();
+    }
+
+    @Override
+    public String encrypt(String text, int key) {
+
+        return null;
+    }
+
+    @Override
+    public String decrypt(String text, int key) {
+        return null;
+    }
+
+    @Override
+    public String getName() {
+        return "Bacon";
+    }
+
+    @Override
+    public boolean requiredKey() {
+        return false;
     }
 }
 

@@ -42,7 +42,7 @@ public class Atbash implements Cipher {
 
     @Override
     public String encrypt(String text, int key) {
-        String encrypted = "";
+
         StringBuilder coder = new StringBuilder();
         for (char c : text.toCharArray()) {
             if (Character.isLetter(c)) {
@@ -52,7 +52,7 @@ public class Atbash implements Cipher {
                 coder.append(c);
             }
         }
-        return encrypted;
+        return coder.toString();
     }
 
     @Override
@@ -67,7 +67,7 @@ public class Atbash implements Cipher {
                 coder.append(c);
             }
         }
-        return null;
+        return coder.toString();
     }
 
 
