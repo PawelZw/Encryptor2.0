@@ -27,7 +27,7 @@ public class EncryptorControl {
                 try {
                     option = Integer.parseInt(scanner.nextLine());
                 } catch (NumberFormatException e) {
-                    System.out.println("Niepoprawna opcja ");
+                    System.out.println("Incorrect option ");
 
                     continue;
                 }
