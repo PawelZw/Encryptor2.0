@@ -12,10 +12,8 @@ public class EncryptorControl {
     private Cipher selectedCipher = null;
 
     private static final int SELECT_CIPHER = 1;
-
     private static final int SELECT_ENCRYPT = 2;
     private static final int SELECT_DECRYPT = 3;
-
     private static final int EXIT = 4;
 
     public void controlLoopEncryptor() {
@@ -56,7 +54,6 @@ public class EncryptorControl {
         System.out.println("An encryption program using selected ciphers");
         System.out.println("Choose one of the options below: ");
         System.out.println(SELECT_CIPHER + "  Select Cipher");
-
         System.out.println(SELECT_ENCRYPT + " select message encryption ");
         System.out.println(SELECT_DECRYPT + " select message decryption ");
         System.out.println(EXIT + "  Exit the program");
@@ -78,7 +75,7 @@ public class EncryptorControl {
     private void doDecryption(){
         System.out.println("Enter the text to be decrypted" + selectedCipher.getName() + ":");
         Scanner scanner = new Scanner(System.in);
-        String text = scanner.nextLine();
+        String text = scanner.nextLine().toUpperCase();
         int key = 0;
         if(selectedCipher.requiredKey()) {
             System.out.println("Enter the decryption key (number of shifts): ");

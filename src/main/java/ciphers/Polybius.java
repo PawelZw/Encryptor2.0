@@ -19,19 +19,6 @@ public class Polybius implements Cipher {
                 table[i][j]=(char)(i*5+j+65+1);
     }
 
-
-   /* static String decrypt(String encpt) {
-        String decpt = "";
-        char[] decpt1 = encpt.toCharArray();
-        for(int i = 0; i < encpt.length(); i = i + 2) {
-            int row = Integer.parseInt(String.valueOf(decpt1[i]));
-            int col = Integer.parseInt(String.valueOf(decpt1[i+1]));
-            decpt = decpt + Character.toString(table[row-1][col-1]);
-        }
-        return decpt;
-    }  */
-
-
     @Override
     public String encrypt(String text, int key) {
         String encpt = "";
@@ -56,7 +43,15 @@ public class Polybius implements Cipher {
 
     @Override
     public String decrypt(String text, int key) {
-        return null;
+     String decpt = "";
+    createTable();
+        char[] decpt1 = text.toCharArray();
+        for(int i = 0; i < text.length(); i = i + 2) {
+            int row = Integer.parseInt(String.valueOf(decpt1[i]));
+            int col = Integer.parseInt(String.valueOf(decpt1[i+1]));
+            decpt = decpt + Character.toString(table[row-1][col-1]);
+        }
+        return decpt;
     }
 
     @Override

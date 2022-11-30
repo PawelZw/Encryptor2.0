@@ -3,9 +3,10 @@ package ciphers;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNotNull;
 
-public class AtbashTest {
+public class PolybiusTest {
 
     Cipher c;
     String nullString = null;
@@ -13,12 +14,12 @@ public class AtbashTest {
 
     @BeforeEach
     void setUp() {
-        c = new Atbash();
+        c = new Polybius();
     }
 
     @Test
     void encrypt() {
-        assertEquals("zyx", c.encrypt("abc", 0));
+        assertEquals("111213", c.encrypt("ABC", 0));
     }
     @Test
     void encryptNotNullIfEmptyString() {
@@ -27,7 +28,7 @@ public class AtbashTest {
 
     @Test
     void decrypt() {
-        assertEquals("wvu", c.decrypt("def", 0));
+        assertEquals("abc", c.decrypt("111213", 0));
     }
 
     @Test
@@ -48,3 +49,5 @@ public class AtbashTest {
     @Test
     void encryptedMessageIsNotNull() { assertNotNull(c.encrypt("Test",0));}
 }
+
+
